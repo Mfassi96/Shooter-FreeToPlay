@@ -18,7 +18,7 @@ xhr.addEventListener("readystatechange", function () {
 
 			let elemento=document.createElement('li')
 
-			lista.appendChild(elemento).innerHTML=`<h3>Title ${data.title}</h3> <br>`
+			lista.appendChild(elemento).innerHTML=`<h3>${data.title}</h3> <br>`
 			lista.appendChild(elemento).innerHTML+=`Platform: ${data.platform} <br>`
 			lista.appendChild(elemento).innerHTML+=`Release Date: ${data.release_date} <br>`
 			lista.appendChild(elemento).innerHTML+=`Download: ${data.game_url} <hr>`
