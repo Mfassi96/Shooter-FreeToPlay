@@ -16,12 +16,14 @@ xhr.addEventListener("readystatechange", function () {
 			console.log(`URL: ${data.game_url}`)
 			*/
 
-			let elemento=document.createElement('li')
+			let elemento=document.createElement('p')
+			let imagen=document.createElement('img')
 
-			lista.appendChild(elemento).innerHTML=`<h3>Title ${data.title}</h3> <br>`
+			lista.appendChild(elemento).innerHTML=`<h3>${data.title}</h3> <br>`
 			lista.appendChild(elemento).innerHTML+=`Platform: ${data.platform} <br>`
 			lista.appendChild(elemento).innerHTML+=`Release Date: ${data.release_date} <br>`
-			lista.appendChild(elemento).innerHTML+=`Download: ${data.game_url} <hr>`
+			elemento.appendChild(imagen).src=`${data.thumbnail}`
+			lista.appendChild(elemento).innerHTML+=`<br/> Download: ${data.game_url} <hr>`
 		}
 	}
 });
